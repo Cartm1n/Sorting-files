@@ -20,9 +20,9 @@ class Sortingfiles(object):
 		while cop != 'q':
 			print("Что переносим?")
 			#cop = input("---")
-			f_path = input("Введите разрешение фаилов - ")
-			new_path = input("Введите название папки куда переместить - ")
-			for txt_file in glob.glob(f_path+"*.docx"):
+			f_path = input("Введите название фаила фаилов - ")  #Навазние фаила, если пустая страка то все фаилы с опредленным расширением
+			new_path = input("Введите название папки куда переместить - ") #Папка куда все переместиться
+			for txt_file in glob.glob(f_path+"*.docx"):  #Сделать ввод расширения
 				final_path = shutil.move(txt_file, new_path)
 			print("произошло копирование")
 
